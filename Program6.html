@@ -1,0 +1,50 @@
+<!-- WRITE JQUERY CODE TO slideUp(),slideDown() AND slideToggle() METHODS. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#slide-up").click(function() {
+                $("div").slideUp(5000);
+            });
+            
+            $("#slide-down").click(function() {
+                $("div").slideDown(5000);
+            });
+
+            $("#slide-toggle").click(function() {
+                $("div").slideToggle(5000);
+            });
+        });
+    </script>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        div {
+            font-size: 5rem;
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
+    </style>
+    <title>program 6</title>
+</head>
+
+<body>
+    <div> Sample Data </div>
+
+    <button id="slide-up"> Click here to slide up </button>
+    <button id="slide-down"> Click here to slide down </button>
+    <button id="slide-toggle"> Click here to slide toggle </button>
+</body>
+
+</html>

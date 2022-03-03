@@ -1,0 +1,35 @@
+<!-- AJAX  CODE TO READ THE data.JSON JSON FILE. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function load_doc() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if(this.readyState === 4 && this.status === 200) {
+                    myFunction(this.responseText);
+                }
+            }
+
+            xhr.open("GET", "data.JSON", true);
+            xhr.send();
+        }
+
+        function myFunction(jsonFile) {
+            var jsonObj = JSON.parse(jsonFile);
+
+            for(var i = 0; i < 3; i++) {
+                console.log(jsonObj["employees"][i]["firstName"] + " " + jsonObj["employees"][i]["lastName"]);
+            }
+        }
+    </script>
+    <title>Program 3</title>
+</head>
+<body>
+    <button onclick="load_doc()"> Click here to show data </button>
+</body>
+</html>

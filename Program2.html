@@ -1,0 +1,48 @@
+<!-- AJAX  CODE TO READ THE data.xml XML FILE. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+        function load_doc() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if(this.readyState === 4 && this.status === 200) {
+                    myFunction(this);
+                }
+            }
+
+            xhr.open("GET", "data.xml", true);
+            xhr.send();
+        }
+
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var x = xmlDoc.getElementsByTagName("stud");
+
+            for(i = 0; i < x.length; i++) {
+                // document.getElementById("demo").innerHTML = x[i].getElementsByTagName("fname")[0].childNodes[0].nodeValue;
+                console.log(`${i + 1} data: `);
+                console.log(x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+                console.log(x[i].getElementsByTagName("age")[0].childNodes[0].nodeValue);
+                console.log(x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue);
+                console.log(x[i].getElementsByTagName("cell")[0].childNodes[0].nodeValue);
+                console.log(x[i].getElementsByTagName("address")[0].childNodes[0].nodeValue);
+            }
+        }
+    </script>
+
+    <title> Program 2 </title>
+</head>
+<body>
+    <h1> Click the button below to parse the XML </h1>
+    <button id="btn" onclick="load_doc();"> Click Here </button>
+
+    <!-- <div id="demo" style="margin-top: 1rem; font-size: 5rem;"></div> -->
+</body>
+</html>

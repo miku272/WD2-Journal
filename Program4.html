@@ -1,0 +1,47 @@
+<!-- WRITE JQUERY CODE TO show(), hide() AND toggle() METHODS. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#show").click(function() {
+                $("div").show(5000);
+            });
+            
+            $("#hide").click(function() {
+                $("div").hide(5000);
+            });
+
+            $("#toggle").click(function() {
+                $("div").toggle(5000);
+            });
+        });
+    </script>
+    <style>
+        *{
+            text-align: center;
+        }
+        
+        div {
+            font-size: 5rem;
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
+    </style>
+    <title>program 4</title>
+</head>
+<body>
+    <div> Sample Data </div>
+
+    <button id="show"> Click here to show </button>
+    <button id="hide"> Click here to hide </button>
+    <button id="toggle"> Click here to toggle </button>
+</body>
+</html>

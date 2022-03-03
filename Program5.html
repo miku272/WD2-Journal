@@ -1,0 +1,50 @@
+<!-- WRITE JQUERY CODE TO fadeIn(),fadeOut() AND fadeToggle() METHODS. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#fade-in").click(function() {
+                $("div").fadeIn(5000);
+            });
+            
+            $("#fade-out").click(function() {
+                $("div").fadeOut(5000);
+            });
+
+            $("#fade-toggle").click(function() {
+                $("div").fadeToggle(5000);
+            });
+        });
+    </script>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        div {
+            font-size: 5rem;
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
+    </style>
+    <title>program 5</title>
+</head>
+
+<body>
+    <div> Sample Data </div>
+
+    <button id="fade-in"> Click here to fade in </button>
+    <button id="fade-out"> Click here to fade out </button>
+    <button id="fade-toggle"> Click here to fade toggle </button>
+</body>
+
+</html>

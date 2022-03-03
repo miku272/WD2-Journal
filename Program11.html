@@ -1,0 +1,67 @@
+<!-- WRITE JQUERY CODE TO DEMONSTRATE HTML SET METHODS.(text(), attr(), html(), val()). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#id-1").click(function () {
+                $("div").text("Text Changed");
+            });
+
+            $("#id-2").click(function () {
+                $("div").attr("id", "id-changed");
+                alert($("div").attr("id"));
+            });
+
+            $("#id-3").click(function () {
+                $("div").html("<i> This is in Italics now! </i>");
+            });
+
+            $("#id-4").click(function () {
+                $("#txt").val("I just changed the value!");
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 1rem;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        div {
+            font-size: 4rem;
+        }
+
+        button {
+            font-size: 2rem;
+        }
+    </style>
+
+    <title>Program 11</title>
+</head>
+
+<body>
+    <div id="data-div">
+        <b> We will experiment on this! </b>
+    </div>
+
+    <input type="text" id="txt" value="TextBox value!" style="display: block;">
+
+    <button id="id-1"> Set text </button>
+    <button id="id-2"> Set attribute </button>
+    <button id="id-3">Set HTML </button>
+    <button id="id-4"> Set Value </button>
+</body>
+
+</html>

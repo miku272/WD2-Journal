@@ -1,0 +1,62 @@
+<!-- WRITE JQUERY CODE TO SHOW append(), prepend(), after(), before()). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#id-1").click(function() {
+                $("div").append("<b> Appended Data </b>");
+            });
+
+            $("#id-2").click(function() {
+                $("div").prepend("<i> Prepended Data </i>");
+            });
+
+            $("#id-3").click(function() {
+                $("div").before("<u> Data before div </u>");
+            });
+
+            $("#id-4").click(function() {
+                $("div").after("<u> Data after div </u>");
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 1rem;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        div {
+            font-size: 4rem;
+        }
+
+        button {
+            font-size: 2rem;
+        }
+    </style>
+
+    <title>Program 12</title>
+</head>
+
+<body>
+    <div> We will experiment on this! </div>
+
+    <button id="id-1"> Append </button>
+    <button id="id-2"> Prepend </button>
+    <button id="id-3"> Before </button>
+    <button id="id-4"> After </button>
+</body>
+
+</html>

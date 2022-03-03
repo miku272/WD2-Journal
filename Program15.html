@@ -1,0 +1,61 @@
+<!-- WRITE JQUERY CODE TO DEMONSTRATE addClass(), removeClass() and toggleClass(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#add-class").click(function () {
+                $("div").addClass("sybca");
+            });
+
+            $("#remove-class").click(function () {
+                $("div").removeClass("sybca");
+            });
+
+            $("#toggle-class").click(function () {
+                $("div").toggleClass("sybca");
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 1rem;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        div {
+            font-size: 4rem;
+        }
+
+        button {
+            font-size: 2rem;
+        }
+
+        .sybca {
+            color: red;
+        }
+    </style>
+
+    <title>Program 15</title>
+</head>
+
+<body>
+    <div> We will experiment on this! </div>
+
+    <button id="add-class"> Add Class </button>
+    <button id="remove-class"> Remove Class</button>
+    <button id="toggle-class"> Toggle Class </button>
+</body>
+
+</html>

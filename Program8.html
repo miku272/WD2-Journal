@@ -1,0 +1,77 @@
+<!-- WRITE JQUERY CODE TO SHOW CALLBACK METHODS. (SHOW ATLEAST 5 METHODS). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#cb-1").click(function () {
+                $("div").hide(1000, function () {
+                    alert("Data hidden!"); // callback function
+                });
+            });
+
+            $("#cb-2").click(function () {
+                $("div").show(1000, function () {
+                    alert("Data visible!"); // callback function
+                });
+            });
+
+            $("#cb-3").click(function () {
+                $("div").fadeOut(1000, function () {
+                    alert("Data faded out!"); // callback function
+                });
+            });
+
+            $("#cb-4").click(function () {
+                $("div").fadeIn(1000, function () {
+                    alert("Data faded in!"); // callback function
+                });
+            });
+
+            $("#cb-5").click(function () {
+                $("div").fadeTo(1000, 0.3, function () {
+                    alert("Data faded to 0.3 opacity!"); // callback function
+                });
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 1rem;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        div {
+            font-size: 4rem;
+        }
+
+        button {
+            font-size: 2rem;
+        }
+    </style>
+
+    <title> Program 8 </title>
+</head>
+
+<body>
+    <div> We will experiment on this! </div>
+
+    <button id="cb-1"> Hide </button>
+    <button id="cb-2"> Show </button>
+    <button id="cb-3"> Fade Out </button>
+    <button id="cb-4"> Fade In </button>
+    <button id="cb-5"> Fade To </button>
+</body>
+
+</html>
